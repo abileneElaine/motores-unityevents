@@ -100,6 +100,14 @@ public class PlayerController : MonoBehaviour
     {
         forcaPuloAtual = forcaPuloOriginal;
     }
+
+    public void PuloForcado()
+    {
+        _rb.velocity = Vector3.zero;
+        _rb.AddForce(Vector3.up * forcaPuloAtual, ForceMode.Impulse); //pulo
+            noChao = false;
+
+    }
     
     
 }
